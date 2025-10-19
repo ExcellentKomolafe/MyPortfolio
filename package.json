@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-with-backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:client": "cd Excellent-Portfolio && pnpm dev",
+    "dev:server": "cd server && node index.js",
+    "dev": "concurrently \"pnpm dev:client\" \"pnpm dev:server\"",
+    "build": "cd Excellent-Portfolio && pnpm build",
+    "start": "cd server && node index.js"
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
