@@ -18,7 +18,7 @@ export default function Contact() {
     const formData = { name, email, message };
     
     try {
-      const url = "http://localhost:5000/api/contact";
+      const url = "https://formspree.io/f/xjkazzlr";
       const response = await fetch(url, {
         method: 'POST',
         headers: {
