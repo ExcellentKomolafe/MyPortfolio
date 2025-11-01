@@ -45,7 +45,7 @@ export default function Contact() {
 
   return (
     <div 
-      className="contact" 
+      className="w-4/5 mx-auto" 
       id="contact"
       ref={ref}
       style={{
@@ -54,19 +54,17 @@ export default function Contact() {
         transition: 'all 0.9s'
       }}
     >
-      <h2 className="contact-title">Get In Touch</h2>
-      <p>
-        Please contact me directly at{" "}
-        <a href="mailto:ayexcellent123@gmail.com" className="contact-link">
+      <h2 className="text-3xl text-center my-3">Get In Touch</h2>
+      <p className="text-center text-lg mb-4">
+        Please contact me directly at <a href="mailto:ayexcellent123@gmail.com" className="underline -underline-offset-['0.5']">
           ayexcellent123@gmail.com
-        </a>{" "}
+        </a>
         or through this form.
       </p>
 
-      <form name="contact" method="POST" onSubmit={handleSubmit}>
-        <input type="hidden" name="form-name" value="contact" />
-
+      <form name="contact" onSubmit={handleSubmit} className=" py-4 rounded-3xl flex mx-auto  flex-col  shadow-[0_10px_10px_rgba(35,35,35,0.9)] lg:w-1/2 sm:mb-30 items-center px-2" method="POST">
         <input
+          className="border py-1 px-2 my-4  w-9/10 rounded-lg"
           type="text"
           id="name"
           name="name"
@@ -75,9 +73,9 @@ export default function Contact() {
           onChange={(e) => setName(e.target.value)}
           required
         />
-        <br /><br />
 
         <input
+        className="border w-9/10 py-1 my-4 px-2  rounded-lg"
           type="email"
           id="email"
           name="email"
@@ -86,9 +84,9 @@ export default function Contact() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <br /><br />
 
         <textarea
+          className="border w-9/10 py-1 my-4 px-2  h-30 rounded-lg"
           name="message"
           id="message"
           placeholder="Your message"
@@ -98,11 +96,11 @@ export default function Contact() {
         ></textarea>
         <br /><br />
 
-        <button type="submit" disabled={loading}>
+        <button className="bg-slate-900 text-white rounded-sm w-4/5 py-2 border shadow-sm cursor-pointer  transition-all ease-in-out" type="submit" disabled={loading}>
           {loading ? "Sending..." : "Send"}
         </button>
 
-        {success && <div style={{ color: "green" }}>Message sent successfully!</div>}
+        {success && <div className="" style={{ color: "green" }}>Message sent successfully!</div>}
         {error && <div style={{ color: "red" }}>{error}</div>}
       </form>
     </div>

@@ -11,6 +11,8 @@
     "start": "cd server && node index.js"
   },
   "dependencies": {
-    "concurrently": "^9.0.1"
+    "@tailwindcss/vite": "^4.1.16",
+    "concurrently": "^9.0.1",
+    "tailwindcss": "^4.1.16"
   }
 }
