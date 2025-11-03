@@ -20,7 +20,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 app.use(helmet());
 app.use(express.json({ limit: "10kb" })); 
 app.use(cors({
-  origin: ['https://excellentkomolafe.netlify.app', 'http://localhost:3000'],
+  origin: ['https://excellentkomolafe.netlify.app', 'http://localhost:3000', 'http://localhost:5173'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -130,7 +130,7 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
     const safeMessage = escapeHtml(trimmedMessage);
 
     const adminEmail = await resend.emails.send({
-      from: "onboarding@resend.dev", // Change to your verified domain in production
+      from: "onboarding@resend.dev", 
       to: "ayexcellent123@gmail.com",
       subject: `New Portfolio Contact: ${safeName}`,
       html: `
