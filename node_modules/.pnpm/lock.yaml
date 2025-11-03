@@ -15,11 +15,14 @@ importers:
         specifier: ^9.0.1
         version: 9.2.1
       express-rate-limit:
-        specifier: ^8.2.1
-        version: 8.2.1(express@5.1.0)
+        specifier: ^6.7.0
+        version: 6.7.0(express@5.1.0)
       helmet:
         specifier: ^8.1.0
         version: 8.1.0
+      ip-address:
+        specifier: ^10.0.1
+        version: 10.0.1
     devDependencies:
       autoprefixer:
         specifier: ^10.4.21
@@ -557,11 +560,11 @@ packages:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
 
-  express-rate-limit@8.2.1:
-    resolution: {integrity: sha512-PCZEIEIxqwhzw4KF0n7QF4QqruVTcF73O5kFKUnGOyjbCCgizBBiFaYpd/fnBLUMPw/BWw9OsiN7GgrNYr7j6g==}
-    engines: {node: '>= 16'}
+  express-rate-limit@6.7.0:
+    resolution: {integrity: sha512-vhwIdRoqcYB/72TK3tRZI+0ttS8Ytrk24GfmsxDXK9o9IhHNO5bXRiXQSExPQ4GbaE5tvIS7j1SGrxsuWs+sGA==}
+    engines: {node: '>= 12.9.0'}
     peerDependencies:
-      express: '>= 4.11'
+      express: ^4 || ^5
 
   express@5.1.0:
     resolution: {integrity: sha512-DT9ck5YIRU+8GYzzU5kT3eHGA5iL+1Zd0EutOmTE9Dtk+Tvuzd23VBU+ec7HPNSTxXYO55gPV/hq4pSBJDjFpA==}
@@ -1408,10 +1411,9 @@ snapshots:
 
   etag@1.8.1: {}
 
-  express-rate-limit@8.2.1(express@5.1.0):
+  express-rate-limit@6.7.0(express@5.1.0):
     dependencies:
       express: 5.1.0
-      ip-address: 10.0.1
 
   express@5.1.0:
     dependencies:

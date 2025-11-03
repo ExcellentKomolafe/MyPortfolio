@@ -13,8 +13,9 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "concurrently": "^9.0.1",
-    "express-rate-limit": "^8.2.1",
-    "helmet": "^8.1.0"
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^8.1.0",
+    "ip-address": "^10.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
