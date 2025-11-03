@@ -9,7 +9,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(cors());
 app.use(express.json());
-
+app.use(cors({
+  origin: ['https://excellentkomolafe.netlify.app', 'http://localhost:3000']
+}));
 app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
   
