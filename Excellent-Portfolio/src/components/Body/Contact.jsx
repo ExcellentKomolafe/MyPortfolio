@@ -18,7 +18,7 @@ export default function Contact() {
     const formData = { name, email, message };
     
     try {
-      const url = "https://formspree.io/f/xjkazzlr";
+      const url = "https://myportfolio-06wt.onrender.com/api/contact";
       const response = await fetch(url, {
         method: 'POST',
         headers: {
